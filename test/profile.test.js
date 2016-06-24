@@ -1,4 +1,4 @@
-var expect = require('chai').expect;
+ var expect = require('chai').expect;
 var request = require('supertest');
 var app = require('../index');
 var db = require('../models');
