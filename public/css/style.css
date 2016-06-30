@@ -1,0 +1,26 @@
+.column  {
+  border: 1px solid black;
+  font-family: 'Hind Siliguri', sans-serif;
+  font-weight: medium;
+  }
+h1  {
+  font-family: 'Hind Siliguri', sans-serif;
+  font-weight: lighter;
+  color: #465c8b;
+}
+
+
+body { background-color: #BBDEFB;
+}
+
+
+
+/*body {
+  background-image:url('https://images.unsplash.com/photo-1428947667392-649218f955eb?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=f293a6613fe4d011fbe5eb1257803568');
+  background-size: 75% auto;
+  background-repeat: no-repeat;
+
+}
+
+
+*/

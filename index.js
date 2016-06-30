@@ -3,12 +3,13 @@ var ejsLayouts = require('express-ejs-layouts');
 var bodyParser = require('body-parser');
 var session = require('express-session');
 var passport = require('./config/ppConfig');
+var path = require('path')
 var flash = require('connect-flash');
 var isLoggedIn = require('./middleware/isLoggedIn');
 var app = express();
 
 app.set('view engine', 'ejs');
-
+app.use(express.static(path.join(__dirname, 'public')))
 app.use(require('morgan')('dev'));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(ejsLayouts);
@@ -35,6 +36,10 @@ app.get('/profile', isLoggedIn, function(req, res) {
 });
 
 app.use('/auth', require('./controllers/auth'));
+app.use('/sessions', require('./controllers/sessions'));
+app.use('/users', require('./controllers/users'));
+// When a user goes to localhost:3000/beaches, use the following controller:
+app.use('/beaches', require('./controllers/beaches'));
 
 var server = app.listen(process.env.PORT || 3000);
 
