@@ -26,10 +26,10 @@ passport.use(new LocalStrategy({
         }
 
     }).then(function(user) {
-        if (user && user.validPassword(password)) {
-            cb(null, user);
-        } else {
+        if (!user || !user.validPassword(password)) {
             cb(null, false);
+        } else {
+            cb(null, user);
         }
     }).catch(cb);
 }));

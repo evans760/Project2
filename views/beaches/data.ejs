@@ -1,65 +1,61 @@
-<!--
-<div class="row">
-  <div class="col-md-2 column">time</div>
 
-  <div class="col-md-2 column">tide</div>
 
-  <div class="col-md-2 column">surf height</div>
 
-  <div class="col-md-4 column">swells</div>
-
-   <div class="col-md-2 column">wind</div>
-</div>
 
 <div class="row">
-  <div class="col-md-2 column">time</div>
+  <div class="col-md-1 column">time</div>
 
-  <div class="col-md-2 column">tide</div>
+  <div class="col-md-1 column">swell dir.1</div>
 
-  <div class="col-md-2 column">surf height</div>
+  <div class="col-sm-1 column">swell dir.2</div>
 
-  <div class="col-md-4 column">swells</div>
+  <div class="col-sm-1 column">swell dir.3</div>
 
-   <div class="col-md-2 column">wind</div>
+  <div class="col-sm-1 column">swell per.1</div>
+
+  <div class="col-sm-1 column">swell per.2</div>
+
+  <div class="col-sm-1 column">swell per.3</div>
+
+  <div class="col-sm-1 column">swell ht. 1</div>
+
+  <div class="col-sm-1 column">swell ht. 2</div>
+
+  <div class="col-sm-1 column">swell ht. 3</div>
+
+   <div class="col-sm-1 column">wind dir.</div>
+
+   <div class="col-sm-1 column">wind spd.</div>
 </div>
 
-<div class="row">
-  <div class="col-md-2 column">time</div>
+<% for (var i = 0; i< beachData.length; i ++) { %>
+  <div class="row">
+  <div class="col-sm-1 column"><%=beachData[i].date%></div>
 
-  <div class="col-md-2 column">tide</div>
+  <div class="col-sm-1 column"><%=beachData[i].sd1%></div>
 
-  <div class="col-md-2 column">surf height</div>
+  <div class="col-sm-1 column"><%=beachData[i].sd2%></div>
 
-  <div class="col-md-4 column">swells</div>
+  <div class="col-sm-1 column"><%=beachData[i].sd3%></div>
 
-   <div class="col-md-2 column">wind</div>
+  <div class="col-sm-1 column"><%=beachData[i].sp1%></div>
+
+  <div class="col-sm-1 column"><%=beachData[i].sp2%></div>
+
+  <div class="col-sm-1 column"><%=beachData[i].sp3%></div>
+
+  <div class="col-sm-1 column"><%=beachData[i].sh1%></div>
+
+  <div class="col-sm-1 column"><%=beachData[i].sh2%></div>
+
+  <div class="col-sm-1 column"><%=beachData[i].sh3%></div>
+
+  <div class="col-sm-1 column"><%=beachData[i].wd%></div>
+
+  <div class="col-sm-1 column"><%=beachData[i].ws%></div>
 </div>
+<% } %>
 
-<div class="row">
-  <div class="col-md-2 column">time</div>
 
-  <div class="col-md-2 column">tide</div>
 
-  <div class="col-md-2 column">surf height</div>
 
-  <div class="col-md-4 column">swells</div>
-
-   <div class="col-md-2 column">wind</div>
-</div>
-
-<div class="row">
-  <div class="col-md-2 column">time</div>
-
-  <div class="col-md-2 column">tide</div>
-
-  <div class="col-md-2 column">surf height</div>
-
-  <div class="col-md-4 column">swells</div>
-
-   <div class="col-md-2 column">wind</div>
-</div>
-<body>
-
-</body>
- -->
- <div id="container" style="width:100%; height:400px;"></div>

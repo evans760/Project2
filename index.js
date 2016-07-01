@@ -5,34 +5,40 @@ var session = require('express-session');
 var passport = require('./config/ppConfig');
 var path = require('path')
 var flash = require('connect-flash');
+
+
+
+
 var isLoggedIn = require('./middleware/isLoggedIn');
 var app = express();
 
 app.set('view engine', 'ejs');
 app.use(express.static(path.join(__dirname, 'public')))
 app.use(require('morgan')('dev'));
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({
+    extended: false
+}));
 app.use(ejsLayouts);
 app.use(session({
-  secret: process.env.SESSION_SECRET,
-  resave: false,
-  saveUninitialized: true
+    secret: process.env.SESSION_SECRET,
+    resave: false,
+    saveUninitialized: true
 }));
 app.use(passport.initialize());
 app.use(passport.session());
 app.use(flash());
 app.use(function(req, res, next) {
-  res.locals.alerts = req.flash();
-  res.locals.currentUser = req.user;
-  next();
+    res.locals.alerts = req.flash();
+    res.locals.currentUser = req.user;
+    next();
 });
 
 app.get('/', function(req, res) {
-  res.render('index');
+    res.render('index');
 });
 
 app.get('/profile', isLoggedIn, function(req, res) {
-  res.render('profile');
+    res.render('profile');
 });
 
 app.use('/auth', require('./controllers/auth'));
