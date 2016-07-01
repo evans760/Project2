@@ -1,4 +1,4 @@
-$(function () {
+$(function() {
     $('#container').highcharts({
         chart: {
             type: 'bar'
@@ -27,17 +27,16 @@ $(function () {
 
 var chart1; // globally available
 $(function() {
-      chart1 = new Highcharts.StockChart({
-         chart: {
+    chart1 = new Highcharts.StockChart({
+        chart: {
             renderTo: 'container'
-         },
-         rangeSelector: {
+        },
+        rangeSelector: {
             selected: 1
-         },
-         series: [{
+        },
+        series: [{
             name: 'USD to EUR',
             data: usdtoeur // predefined JavaScript array
-         }]
-      });
-   });
-
+        }]
+    });
+});

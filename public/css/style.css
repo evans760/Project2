@@ -9,6 +9,12 @@ h1  {
   color: #465c8b;
 }
 
+h2 {
+  font-family: 'Hind Siliguri', sans-serif;
+  font-weight: lighter;
+  color: #465c8b;
+}
+
 
 body { background-color: #BBDEFB;
 }
